@@ -1,0 +1,5 @@
+server:
+  port: 8081
+biography:
+  endpoints:
+    proverb-service: http://localhost:8080/proverb/
