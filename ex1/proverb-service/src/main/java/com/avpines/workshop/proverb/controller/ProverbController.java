@@ -3,6 +3,7 @@ package com.avpines.workshop.proverb.controller;
 import com.avpines.workshop.proverb.model.Proverb;
 import com.avpines.workshop.proverb.service.ProverbService;
 import org.jetbrains.annotations.NotNull;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -22,6 +23,7 @@ public class ProverbController {
 
     private final ProverbService proverbService;
 
+    @Autowired
     public ProverbController(ProverbService proverbService) {
         this.proverbService = proverbService;
     }

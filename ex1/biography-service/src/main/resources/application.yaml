@@ -2,4 +2,8 @@ server:
   port: 8081
 biography:
   endpoints:
-    proverb-service: http://localhost:8080/proverb/
+    # This sets the property biography.endpoints.proverb-service to have the
+    # value of the environment variable $PROVERB_SERVICE_URL, and if such does
+    # not exist it will get a default value of 'http://localhost:8080/proverb/'.
+    # (The environment variable is needed for ex2)
+    proverb-service: ${PROVERB_SERVICE_URL:http://localhost:8080}/proverb/
